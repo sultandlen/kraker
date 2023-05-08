@@ -4,17 +4,17 @@ public class Kraker {
         for (int i = 0; i < 3; i++) {
             Population population = new Population(GeneticAlgorithm.POPULATION_SIZE).initializePopulation();
             GeneticAlgorithm geneticAlgorithm = new GeneticAlgorithm();
-            System.out.println("Generation # 0 " + "| Fittest chromosome fitness: " + population.getChromosomes()[0].getFitness());
+            System.out.println("Generation # 0 " + "\nFittest chromosome fitness: " + population.getChromosomes()[0].getFitness());
             //printPopulation(population); //print first generation
             System.out.println("Fittest chromosome: " + population.getChromosomes()[0].toString());
             int generationNumber = 0;
             long start = System.currentTimeMillis();
             while (population.getChromosomes()[0].getFitness() != 0) {
                 generationNumber++;
-                //System.out.println("\n-------------------------------------------");
+                //System.out.println("\n--------------------------------------");
                 population = geneticAlgorithm.evolve(population);
                 population.sortChromosomesByFitness();
-                System.out.println("Generation # " + generationNumber + "| Fittest chromosome fitness: " + population.getChromosomes()[0].getFitness());
+                System.out.println("Generation # " + generationNumber + "\nFittest chromosome fitness: " + population.getChromosomes()[0].getFitness());
                 System.out.println("Fittest chromosome: " + population.getChromosomes()[0].toString());
             }
             //printPopulation(population); //print last generation
@@ -26,7 +26,7 @@ public class Kraker {
     }
 
     public static void printTable(long[][] data) {
-        System.out.println("\n-------------------------------------------");
+        System.out.println("\n--------------------------------------");
         System.out.println("             | Time(ms) | Generation |");
         System.out.println("-------------|----------|------------|");
         int totalGeneration = 0;
