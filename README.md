@@ -1,6 +1,6 @@
 # Kraker
 
-Kraker is a genetic algortihm to find a text.
+Implementing a genetic algorithm to find solution to a password guessing problem.
 
 ## Demo
 
